@@ -1,0 +1,14 @@
+name: "L'Unico Anello"
+slug: "unico_anello"
+version: "1.0.0"
+description: "App Home Assistant per la gestione delle partite al GDR L'Unico Anello"
+image: "ghcr.io/shardik86/unicoanello"
+url: "https://github.com/shardik86/unicoanello/unicoanello-addon"
+arch:
+  - amd64
+  - aarch64
+startup: services
+ports:
+  8080/tcp: 8080
+options: {}
+schema: {}

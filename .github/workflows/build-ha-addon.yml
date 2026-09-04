@@ -1,0 +1,53 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+name: Update HA Addon
+
+on:
+    repository_dispatch:
+        types:
+            - unicoanello-release
+    workflow_dispatch:
+
+permissions:
+    contents: write
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Read release version
+              id: release
+              run: |
+                  VERSION="${{ github.event.client_payload.version }}"
+
+                  if ! echo "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+                      echo "Invalid release version: $VERSION"
+                      exit 1
+                  fi
+
+                  echo "VERSION=${VERSION}" >> "$GITHUB_OUTPUT"
+                  
+            - name: Update config.yaml with release version
+              run: |
+                  sed -i "s/^version: .*/version: \"${{ steps.release.outputs.VERSION }}\"/" unicoanello-addon/config.yaml
+
+            - name: Commit and tag
+              env:
+                VERSION: ${{ steps.release.outputs.version }}
+              run: |
+              
+                git config user.name "github-actions[bot]"
+                git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+              
+                git add unicoanello-addon/config.yaml
+              
+                git commit \
+                  -m "Release L'Unico Anello ${VERSION}"
+              
+                git tag "v${VERSION}"
+              
+                git push origin HEAD
+                git push origin "v${VERSION}"
