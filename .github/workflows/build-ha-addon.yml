@@ -22,13 +22,33 @@ jobs:
               id: release
               run: |
                   VERSION="${{ github.event.client_payload.version }}"
+                  SOURCE_TAG="${{ github.event.client_payload.source_tag }}"
 
                   if ! echo "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'; then
                       echo "Invalid release version: $VERSION"
                       exit 1
                   fi
+                  
+                  if ! echo "$SOURCE_TAG" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+$'; then
+                      echo "Invalid source tag: $SOURCE_TAG"
+                      exit 1
+                  fi
 
                   echo "VERSION=${VERSION}" >> "$GITHUB_OUTPUT"
+                  echo "SOURCE_TAG=${SOURCE_TAG}" >> "$GITHUB_OUTPUT"
+                  
+            - name: Checkout unicoanello source tag
+              uses: actions/checkout@v4
+              with:
+                    repository: shardik86/unicoanello
+                    ref: ${{ steps.release.outputs.SOURCE_TAG }}
+                    path: unicoanello-source
+                    token: ${{ secrets.UNICOANELL_READ_TOKEN }}
+                    
+            - name: Update documentation
+              run: |
+                  cp unicoanello-source/README.md unicoanello-addon/README.md
+                  cp unicoanello-source/CHANGELOG.md unicoanello-addon/CHANGELOG.md
                   
             - name: Update config.yaml with release version
               run: |
@@ -43,6 +63,13 @@ jobs:
                 git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
               
                 git add unicoanello-addon/config.yaml
+                git add unicoanello-addon/README.md
+                git add unicoanello-addon/CHANGELOG.md
+                
+                if git diff --cached --quiet; then
+                  echo "No changes to commit"
+                  exit 0
+                else
               
                 git commit \
                   -m "Release L'Unico Anello ${VERSION}"
