@@ -43,7 +43,7 @@ jobs:
                     repository: shardik86/unicoanello
                     ref: ${{ steps.release.outputs.SOURCE_TAG }}
                     path: unicoanello-source
-                    token: ${{ secrets.UNICOANELL_READ_TOKEN }}
+                    token: ${{ secrets.UNICOANELLO_READ_TOKEN }}
                     
             - name: Update documentation
               run: |
