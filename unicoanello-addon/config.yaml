@@ -1,6 +1,6 @@
 name: "L'Unico Anello"
 slug: "unico_anello"
-version: "1.0.1"
+version: "1.0.2"
 description: "App Home Assistant per la gestione delle partite al GDR L'Unico Anello"
 image: "ghcr.io/shardik86/unicoanello"
 url: "https://github.com/shardik86/unicoanello-ha-addons/tree/master/unicoanello-addon"
