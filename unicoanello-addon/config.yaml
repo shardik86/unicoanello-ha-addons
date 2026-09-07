@@ -29,7 +29,7 @@ schema:
   db_password: password
   external_url: url
   java_opts: str
-  log_level: list(trace, debug, info, warn, error, fatal, off)
+  log_level: list(trace|debug|info|warn|error|fatal|off)
   mail_host: str
   mail_port: port
   mail_auth: bool
