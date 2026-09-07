@@ -194,7 +194,7 @@ Domande? Richieste?
 
 Puoi [aprire una issue qui][issue] su GitHub.
 
-## Authore
+## Autore
 
 Il setup di questo repository è stato fatto da [Filippo Tosti][filippo].
 
