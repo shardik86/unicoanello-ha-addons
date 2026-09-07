@@ -10,5 +10,36 @@ arch:
 startup: services
 ports:
   8080/tcp: 8080
-options: {}
-schema: {}
+options:
+  db_url: jdbc:mariadb://homeassistant:3306/unicoanello
+  db_username: unicoanello
+  db_password: null
+  external_url: https://lacompagniadelrogo.duckdns.org
+  java_opts: ""
+  log_level: info
+  mail_host: smtp.gmail.com
+  mail_port: 587
+  mail_auth: true
+  mail_starttls: true
+  mail_username: ""
+  mail_password: null
+schema:
+  db_url: str
+  db_username: str
+  db_password: password
+  external_url: url
+  java_opts: str
+  log_level: list
+    - TRACE
+    - DEBUG
+    - INFO
+    - WARN
+    - ERROR
+    - FATAL
+    - OFF
+  mail_host: str
+  mail_port: port
+  mail_auth: bool
+  mail_starttls: bool
+  mail_username: email
+  mail_password: password
