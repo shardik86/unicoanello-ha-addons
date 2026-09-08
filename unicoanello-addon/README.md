@@ -1,7 +1,5 @@
 # L'Unico Anello
 
-![L'Unico Anello](logo.png "L'Unico Anello")
-
 Applicazione Spring Boot 3.5.x per la gestione delle compagnie e i diari di viaggio del GdR L'Unico Anello - Seconda Edizione, edito in Italia da NeedGames. Il software contiene anche la Knowledge Base, comodamente divisa per argomenti e copiata dal manuale base del gioco. L'admin/maestro del sapere si occupa anche della creazione di mappe, aggiungere personaggi/NPC, luoghi, dicerie, avversari e tesori, attingendo da altro materiale o dalla propria fantasia. 
 
 > Buon viaggio nell'Eriador.
