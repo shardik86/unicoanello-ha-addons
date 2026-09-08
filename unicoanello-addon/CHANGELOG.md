@@ -2,6 +2,21 @@
 
 Tutti gli aggiornamenti sulle funzionalità sono registrati in questo file.
 
+## [1.0.4] - 2026-09-08
+
+### Added
+
+- Supporto Lombok per riduzione boilerplate.
+
+### Changed
+
+- Preparazione migrazione a Spring Boot 4.x.
+- Rimosse annotazioni Autowired.
+
+### Fixed
+
+- Config page: version retrieved using Build Information from maven plugin.
+
 ## [1.0.3] - 2026-09-07
 
 ### Added
