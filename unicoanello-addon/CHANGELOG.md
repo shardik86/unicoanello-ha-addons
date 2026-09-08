@@ -2,22 +2,32 @@
 
 Tutti gli aggiornamenti sulle funzionalità sono registrati in questo file.
 
+## [1.1.1] - 2026-09-08
+
+### Changed
+
+- Riduzione sostanziale codice usando _@Data_  lombok.
+
+### Fixed
+
+- Puntamento _/opt/java/openjdk/bin/java_  in run.sh.
+
 ## [1.1.0] - 2026-09-08
 
 ### Fixed
 
-- Esecuzione jq dentro run.sh effettuata da root.
+- `jq` dentro run.sh effettuata da root.
 
 ## [1.0.4] - 2026-09-08
 
 ### Added
 
-- Supporto Lombok per riduzione boilerplate.
+- Supporto _Lombok_ per riduzione boilerplate.
 
 ### Changed
 
-- Preparazione migrazione a Spring Boot 4.x.
-- Rimosse annotazioni Autowired.
+- Preparazione migrazione a _Spring Boot 4.x_.
+- Rimosse annotazioni _Autowired_ .
 
 ### Fixed
 
@@ -33,8 +43,8 @@ Tutti gli aggiornamenti sulle funzionalità sono registrati in questo file.
 
 ### Changed
 
-- Dockerfile: supporto jq per lettura delle opzioni HA e impostazione JAVA_OPTS.
-- run.sh: supporto jq e JAVA_OPTS
+- Dockerfile: supporto `jq` per lettura delle opzioni HA e impostazione JAVA_OPTS.
+- run.sh: supporto `jq` e JAVA_OPTS
 
 ## [1.0.2] - 2026-09-04
 
