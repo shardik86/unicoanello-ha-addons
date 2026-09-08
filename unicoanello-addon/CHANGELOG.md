@@ -2,6 +2,16 @@
 
 Tutti gli aggiornamenti sulle funzionalità sono registrati in questo file.
 
+## [1.1.2] - 2026-09-08
+
+### Added
+
+- Numero di versione su schermata di login.
+
+### Fixed
+
+- Hash value di `Eroe`.
+
 ## [1.1.1] - 2026-09-08
 
 ### Changed
