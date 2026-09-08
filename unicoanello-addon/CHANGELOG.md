@@ -2,6 +2,12 @@
 
 Tutti gli aggiornamenti sulle funzionalità sono registrati in questo file.
 
+## [1.1.0] - 2026-09-08
+
+### Fixed
+
+- Esecuzione jq dentro run.sh effettuata da root.
+
 ## [1.0.4] - 2026-09-08
 
 ### Added
