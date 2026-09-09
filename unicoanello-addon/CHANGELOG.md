@@ -2,6 +2,22 @@
 
 Tutti gli aggiornamenti sulle funzionalità sono registrati in questo file.
 
+## [1.1.3] - 2026-09-09
+
+### Changed
+
+- Migration to Spring Boot *4.0*.
+- Bump Spring Boot to *4.1.1*.
+- Bump springdoc-openapi-starter-webmvc-ui to *3.1.1*.
+
+### Added
+
+- *DataTables* webjar per la pagina dei viaggi della compagnia.
+
+### Fixed
+
+- *@ToString* Lombok migliorato per varie entity.
+
 ## [1.1.2] - 2026-09-08
 
 ### Added
@@ -16,11 +32,11 @@ Tutti gli aggiornamenti sulle funzionalità sono registrati in questo file.
 
 ### Changed
 
-- Riduzione sostanziale codice usando _@Data_  lombok.
+- Riduzione sostanziale codice usando *@Data* lombok.
 
 ### Fixed
 
-- Puntamento _/opt/java/openjdk/bin/java_  in run.sh.
+- Puntamento */opt/java/openjdk/bin/java* in run.sh.
 
 ## [1.1.0] - 2026-09-08
 
@@ -36,8 +52,8 @@ Tutti gli aggiornamenti sulle funzionalità sono registrati in questo file.
 
 ### Changed
 
-- Preparazione migrazione a _Spring Boot 4.x_.
-- Rimosse annotazioni _Autowired_ .
+- Preparazione migrazione a *Spring Boot 4.x*.
+- Rimosse annotazioni *Autowired*.
 
 ### Fixed
 

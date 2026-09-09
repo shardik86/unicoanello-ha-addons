@@ -1,6 +1,6 @@
 # L'Unico Anello
 
-Applicazione Spring Boot 3.5.x per la gestione delle compagnie e i diari di viaggio del GdR L'Unico Anello - Seconda Edizione, edito in Italia da NeedGames. Il software contiene anche la Knowledge Base, comodamente divisa per argomenti e copiata dal manuale base del gioco. L'admin/maestro del sapere si occupa anche della creazione di mappe, aggiungere personaggi/NPC, luoghi, dicerie, avversari e tesori, attingendo da altro materiale o dalla propria fantasia. 
+Applicazione Spring Boot 4.1.x per la gestione delle compagnie e i diari di viaggio del GdR L'Unico Anello - Seconda Edizione, edito in Italia da NeedGames. Il software contiene anche la Knowledge Base, comodamente divisa per argomenti e copiata dal manuale base del gioco. L'admin/maestro del sapere si occupa anche della creazione di mappe, aggiungere personaggi/NPC, luoghi, dicerie, avversari e tesori, attingendo da altro materiale o dalla propria fantasia. 
 
 > Buon viaggio nell'Eriador.
 
@@ -17,15 +17,16 @@ E'costituito da una base dati MariaDB, dove sono mappate le entità principali d
 
 ### **GUI**
 
-L'interfaccia Web è esposta sulla porta 8080. L'accesso è regolato tramite *Spring Security 6.x* e prevede l'autenticazione di utenti tramite username/password e l'assegnazione di determinate authorities (ADMIN, GM, PLAYER, USER). Le principali tecnologie di frontend utilizzate sono:
+L'interfaccia Web è esposta di default sulla porta 8080. L'accesso è regolato tramite *Spring Security 7.x* e prevede l'autenticazione di utenti tramite username/password e l'assegnazione di determinate authorities (ADMIN, GM, PLAYER, USER). Le principali tecnologie di frontend utilizzate sono:
 
 - [Bootstrap 5](https://getbootstrap.com/docs/5.3) (tramite webjar) - Per la struttura delle pagine
+- [DataTables](https://datatables.net/) - Per la visualizzazione delle tabelle
 - [Fontawesome 6](https://fontawesome.com/v6/search?ic=free-collection) (tramite webjar) - Per le icone
 - [Leaflet](https://leafletjs.com/reference.html) - Per la visualizzazione delle mappe
 
 ### **API**
 
-Usando Spring JPA API Rest sono state esposte via API (/api/**) le Entity mappate usando i Repository JPA.
+Usando Spring JPA API Rest sono state esposte via API (/api/**) le Entity mappate usando i Repository JPA. Le API rispettano i principi HATEOS e sono documentate usando SpringDOC OpenAPI v3.1. 
 
 ### **Mappe**
 
