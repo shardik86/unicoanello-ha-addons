@@ -23,6 +23,7 @@ options:
   mail_starttls: true
   mail_username: ""
   mail_password: null
+  storage_root: /share/unicoanello
 schema:
   db_url: str
   db_username: str
@@ -36,3 +37,6 @@ schema:
   mail_starttls: bool
   mail_username: email
   mail_password: password
+  storage_root: str
+map:
+  - share: rw

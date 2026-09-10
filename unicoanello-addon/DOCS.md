@@ -40,6 +40,7 @@ mail_auth: true
 mail_starttls: true
 mail_username: test@gmail.com
 mail_password: password
+storage_root: /share/unicoanello
 ```
 
 **Nota**: _Questo è solo un esempio, Non copiare!_
@@ -125,6 +126,10 @@ Utenza utilizzata per l'autenticazione con il server di posta.
 #### Option: `mail_password`
 
 Credenziale associata all'utenza usata per l'autenticazione col server di posta.
+
+#### Option: `storage_root` (opzionale)
+
+Directory dove sono memorizzate le risorse statiche (images/tiles) dell'applicazione.
 
 ## Utilizzo con Proxy SSL (Advanced Usage)
 
