@@ -2,6 +2,12 @@
 
 Tutti gli aggiornamenti sulle funzionalità sono registrati in questo file.
 
+## [1.1.5] - 2026-11-19
+
+### Fixed
+
+- Web Config file statici
+
 ## [1.1.4] - 2026-11-19
 
 ### Added
