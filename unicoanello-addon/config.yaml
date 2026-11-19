@@ -1,6 +1,6 @@
 name: "L'Unico Anello"
 slug: "unico_anello"
-version: "1.1.5"
+version: "1.1.6"
 description: "App Home Assistant per la gestione delle partite al GDR L'Unico Anello"
 image: "ghcr.io/shardik86/unicoanello"
 url: "https://github.com/shardik86/unicoanello-ha-addons/tree/master/unicoanello-addon"
@@ -39,4 +39,5 @@ schema:
   mail_password: password
   storage_root: str
 map:
-  - share: rw
+  - type: share
+    read_only: false
