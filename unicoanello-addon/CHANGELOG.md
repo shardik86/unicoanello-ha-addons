@@ -2,6 +2,12 @@
 
 Tutti gli aggiornamenti sulle funzionalità sono registrati in questo file.
 
+## [1.1.6] - 2026-11-19
+
+### Fixed
+
+- config.yaml HA modificata sintassi per il mount della cartella share
+
 ## [1.1.5] - 2026-11-19
 
 ### Fixed
