@@ -2,6 +2,33 @@
 
 Tutti gli aggiornamenti sulle funzionalità sono registrati in questo file.
 
+## [1.1.4] - 2026-11-19
+
+### Added
+
+- FileStorageService per gestione risorse statiche del progetto.
+- Funzionalità "Impersonate": un utente ADMIN può impersonare un altro utente del sistema tramite la pagina della lista Users.
+- Nuova Entity: Impresa - Raggruppamento di viaggi legata funzionalmente ad una compagnia.
+- Pagine di dettaglio/edit per varie entità.
+- Form per admin/gm di edit di un eroe.
+- Aggiunto Genere dell'Eroe.
+- Percezione dell'Occhio aggiunto alla Compagnia.
+- Competate pagine CRUD per tutte le entità oggetto di persistenza nel DB.
+
+### Changed
+
+- Spostamento delle immagini fuori dalle risorse statiche del progetto, in maniera tale da poter essere utilizzate tramite volume Docker. I nuovi path delle risorse statiche di produzione saranno */share/images* e */share/tiles*.
+- Standardizzazione del formato PNG delle immagini.
+- Leaflet inserito fra le librerie importate come webjars (aggiunto Leaflat.Draw per l'edit delle mappe).
+
+### Fixed
+
+- Creazione/Modifica compagnia concesso solo ad ADMIN/GM.
+- Back button in molte pagine.
+- Creazione nuovo User.
+- Creazione nuovo Eroe.
+- Cancellazione Eroe.
+
 ## [1.1.3] - 2026-09-09
 
 ### Changed
